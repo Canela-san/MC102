@@ -3,14 +3,11 @@
 # Laboratório 2 - Rumo a Marte 
 # Nome: Gabriel Canela
 # RA: 243453 ################################################### 
-D1 = int(input())
-V1 = int(input())
-T = int(input())
-D2 = int(input())
-V2 = int(input())
-T1 = ((D1 / V1) / 24) - T
-T2 = (D2 / V2) / 24
-if (T1 < T2):
-    print("True")
-else:
-    print("False")
+
+# Vou tentar usar o menor número de linhas possível, isso é apenas para treinar,
+# mesmo que fique menos legível ainda é válido para aprendizado!
+
+D1, V1, T, D2, V2 = int(input()),int(input()),int(input()),int(input()),int(input())
+[print("True") if (((D1 / V1) / 24) - T) < ((D2 / V2) / 24) else print("False")]
+
+#Apenas duas linhas!

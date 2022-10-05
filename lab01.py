@@ -5,8 +5,7 @@
 # RA: 243453
 ###################################################
 
-a = int(input())
-b = int(input())
+a, b = int(input()), int(input())
 
 print("a =", a)
 print("b =", b)

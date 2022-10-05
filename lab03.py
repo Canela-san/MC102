@@ -6,19 +6,15 @@
 ###################################################
 
 # leitura de dados
-day = int(input())
-hour = int(input())
-min = int(input())
-student = input()
-methonhunuybunihod = input()
+day, hour, minutes, student, method = int(input()),int(input()),int(input()),input(),input()
 
 # valor do ingresso inteiro
-#Bora por função porque acho que o aprendizado é maior (>*-*)>
-def Valor(d, h, min, stu, met):
+# Bora usar função porque acho que o aprendizado é maior (>*-*)>
+def Valor(d, h, minutes, stu, met):
     result = 0
     if h >= 19:
         temp = 1
-    elif h==18 and min >= 30:
+    elif h==18 and minutes >= 30:
         temp = 1
     else:
         temp = 0
@@ -59,7 +55,7 @@ def Valor(d, h, min, stu, met):
     return result
 
 # valor a pagar
-ingresso = Valor(day, hour, min, student, methonhunuybunihod)
+ingresso = Valor(day, hour, minutes, student, method)
 
 # saída do valor do ingresso
 print('Valor do ingresso: R$', format(ingresso, '.2f').replace('.', ','))
