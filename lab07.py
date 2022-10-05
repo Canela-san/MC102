@@ -21,4 +21,4 @@ for n in range(len(defense)-len(attack)):
     if ((v>d)or(v==d and e>0)):
         result = n+1
         break    
-[print('Derrota') if v == 0 else print('Vitória posicionando as tropas a partir da posição', result)]
+[print('Derrota') if result == 0 else print('Vitória posicionando as tropas a partir da posição', result)]
