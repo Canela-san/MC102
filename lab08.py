@@ -5,14 +5,16 @@
 # RA: 
 ###################################################
 
-palavra = input()
+palavra,temp,resultado = input(),'',''
 for a in range(2):
     resultado = ''
-    for i,j in zip(palavra,input()):
-        if (i==j):
+    print(len(palavra))
+    for i,j,k in zip(palavra,input(),temp):
+        if i==j or i==k:
             resultado += i.upper()
         else:
             resultado += '_'
+    temp = resultado
     print(resultado)
 # ...
 print("Resposta correta")
