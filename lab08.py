@@ -1,22 +1,19 @@
 ###################################################
 # MC102 - Algoritmos e Programação de Computadores
 # Laboratório 8 - Wordle
-# Nome: 
-# RA: 
+# Nome: Gabriel Canela
+# RA: 243453
 ###################################################
 
-palavra,temp,resultado = input(),'',''
-for a in range(2):
+palavra,resultado,tentativas = input(),'',6
+for a in range(tentativas):
     resultado = ''
-    print(len(palavra))
-    for i,j,k in zip(palavra,input(),temp):
-        if i==j or i==k:
-            resultado += i.upper()
-        else:
-            resultado += '_'
-    temp = resultado
-    print(resultado)
-# ...
-print("Resposta correta")
-# ...
-print("Palavra correta:", palavra)
+    for i,j in zip(palavra,input()):
+        if i == j:  resultado += j.upper()
+        elif j in palavra:  resultado += j
+        else:   resultado += '_'
+    print (resultado)
+    if resultado.lower()==palavra:
+        print("Resposta correta")
+        break
+    else:   [print("Palavra correta:", palavra) if a==tentativas-1 else None]
