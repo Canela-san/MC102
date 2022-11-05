@@ -12,7 +12,7 @@ while (x!=0):
         if (y<0):
             i.append('Quantidade indisponível para a venda de ' + str(-x) + ' unidades.')
             y-=x
-        elif (x<0):
+        elif (x<0): 
             z+=1
 for j in i:
     print(j)
